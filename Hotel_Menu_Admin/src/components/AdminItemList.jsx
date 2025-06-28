@@ -8,7 +8,7 @@ const AdminItemList = () => {
   const [editFormData, setEditFormData] = useState({ name: '', category: '', price: '' });
 
   useEffect(() => {
-    axios.get('https://shree-shivam-menu-backend.onrender.com/api/menu')
+    axios.get('http://localhost:5000/api/menu')
       .then(res => setItems(res.data))
       .catch(err => console.error('Error fetching items:', err));
   }, []);
@@ -16,7 +16,7 @@ const AdminItemList = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this item?')) {
       try {
-        await axios.delete(`https://shree-shivam-menu-backend.onrender.com/api/menu/${id}`);
+        await axios.delete(`http://localhost:5000/api/menu/${id}`);
         setItems(items.filter(item => item._id !== id));
         alert('Item deleted successfully');
       } catch (err) {
@@ -62,8 +62,8 @@ const AdminItemList = () => {
     console.log('Editing payload:', payload);
 
     try {
-      await axios.put(`https://shree-shivam-menu-backend.onrender.com/api/menu/${editItem}`, payload);
-      const updatedItems = await axios.get('https://shree-shivam-menu-backend.onrender.com/api/menu');
+      await axios.put(`http://localhost:5000/api/menu/${editItem}`, payload);
+      const updatedItems = await axios.get('http://localhost:5000/api/menu');
       setItems(updatedItems.data);
       setEditItem(null);
       setEditFormData({ name: '', category: '', price: '' });
