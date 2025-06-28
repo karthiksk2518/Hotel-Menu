@@ -11,7 +11,7 @@ const AdminAddItem = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/menu', formData);
+      await axios.post('https://shree-shivam-menu-backend.onrender.com/api/menu', formData);
       alert('Item added successfully');
       setFormData({ name: '', category: '', price: '' });
     } catch (err) {

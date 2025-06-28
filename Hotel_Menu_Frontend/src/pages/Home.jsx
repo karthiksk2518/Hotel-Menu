@@ -7,7 +7,7 @@ const Home = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/menu')
+    axios.get('https://shree-shivam-menu-backend.onrender.com/api/menu')
       .then(res => setItems(res.data))
       .catch(err => console.error(err));
   }, []);

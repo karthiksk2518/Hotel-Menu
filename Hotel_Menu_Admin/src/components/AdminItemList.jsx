@@ -1,66 +1,3 @@
-// import { useState, useEffect } from 'react';
-// import axios from 'axios';
-// import { FaTrash } from 'react-icons/fa';
-
-// const AdminItemList = () => {
-//   const [items, setItems] = useState([]);
-
-//   useEffect(() => {
-//     axios.get('http://localhost:5000/api/menu')
-//       .then(res => setItems(res.data))
-//       .catch(err => console.error(err));
-//   }, []);
-
-//   const handleDelete = async (id) => {
-//     if (window.confirm('Are you sure you want to delete this item?')) {
-//       try {
-//         await axios.delete(`http://localhost:5000/api/menu/${id}`);
-//         setItems(items.filter(item => item._id !== id));
-//         alert('Item deleted successfully');
-//       } catch (err) {
-//         console.error(err);
-//         alert('Error deleting item');
-//       }
-//     }
-//   };
-
-//   return (
-//     <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-//       <h3 className="text-lg font-semibold mb-4 text-gray-800 dark:text-white">Menu Items</h3>
-//       <table className="w-full text-left">
-//         <thead>
-//           <tr className="bg-gray-200 dark:bg-gray-700">
-//             <th className="p-2">S.No</th>
-//             <th className="p-2">Name</th>
-//             <th className="p-2">Category</th>
-//             <th className="p-2">Price</th>
-//             <th className="p-2">Action</th>
-//           </tr>
-//         </thead>
-//         <tbody>
-//           {items.map((item, index) => (
-//             <tr key={item._id} className="border-b dark:border-gray-700">
-//               <td className="p-2">{index + 1}</td>
-//               <td className="p-2">{item.name}</td>
-//               <td className="p-2">{item.category}</td>
-//               <td className="p-2">₹{item.price}</td>
-//               <td className="p-2">
-//                 <button onClick={() => handleDelete(item._id)} className="text-red-500">
-//                   <FaTrash />
-//                 </button>
-//               </td>
-//             </tr>
-//           ))}
-//         </tbody>
-//       </table>
-//     </div>
-//   );
-// };
-
-// export default AdminItemList;
-
-
-
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { FaTrash, FaEdit } from 'react-icons/fa';
@@ -71,7 +8,7 @@ const AdminItemList = () => {
   const [editFormData, setEditFormData] = useState({ name: '', category: '', price: '' });
 
   useEffect(() => {
-    axios.get('http://localhost:5000/api/menu')
+    axios.get('https://shree-shivam-menu-backend.onrender.com/api/menu')
       .then(res => setItems(res.data))
       .catch(err => console.error('Error fetching items:', err));
   }, []);
@@ -79,7 +16,7 @@ const AdminItemList = () => {
   const handleDelete = async (id) => {
     if (window.confirm('Are you sure you want to delete this item?')) {
       try {
-        await axios.delete(`http://localhost:5000/api/menu/${id}`);
+        await axios.delete(`https://shree-shivam-menu-backend.onrender.com/api/menu/${id}`);
         setItems(items.filter(item => item._id !== id));
         alert('Item deleted successfully');
       } catch (err) {
@@ -125,8 +62,8 @@ const AdminItemList = () => {
     console.log('Editing payload:', payload);
 
     try {
-      await axios.put(`http://localhost:5000/api/menu/${editItem}`, payload);
-      const updatedItems = await axios.get('http://localhost:5000/api/menu');
+      await axios.put(`https://shree-shivam-menu-backend.onrender.com/api/menu/${editItem}`, payload);
+      const updatedItems = await axios.get('https://shree-shivam-menu-backend.onrender.com/api/menu');
       setItems(updatedItems.data);
       setEditItem(null);
       setEditFormData({ name: '', category: '', price: '' });
