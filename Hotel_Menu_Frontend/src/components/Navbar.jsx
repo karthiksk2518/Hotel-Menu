@@ -8,7 +8,7 @@ const Navbar = () => {
         <h1 className="text-2xl font-bold text-gray-800">Shree Shivam Hotel</h1>
       </div> */}
       <div>
-        <img src={logo} alt="Logo" className="h-14" />
+        <img src={logo} alt="Logo" className="h-12" />
       </div>    
     </nav>
   );
