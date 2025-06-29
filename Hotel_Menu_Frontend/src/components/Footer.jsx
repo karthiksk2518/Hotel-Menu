@@ -18,7 +18,7 @@ const Footer = () => {
             <a href="#" className="text-4xl"><FaTwitter /></a>
             <a href="#" className="text-4xl"><FaInstagram /></a>
           </div>
-          <hr className='mt-4 text-gray-500'/>
+          {/* <hr className='mt-4 text-gray-500'/> */}
         </div>
         <div>
           <h3 className="text-3xl font-semibold mb-2">Contact Us</h3>
@@ -28,6 +28,11 @@ const Footer = () => {
           <p className='text-lg mb-1'>9826812355</p>
         </div>
       </div>
+      <hr className="my-6 border-t border-gray-500 w-full max-w-4xl mx-auto" />
+      <div className="text-center text-gray-400">
+        &copy; {new Date().getFullYear()} Shree Shivam Hotel & Restaurant. All rights reserved.
+      </div>
+      <p className='text-center text-gray-400'>Designed and Developed by Kundan Patidar</p>
     </footer>
   );
 };
