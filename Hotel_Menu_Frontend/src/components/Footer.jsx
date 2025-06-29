@@ -1,4 +1,5 @@
 import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import logo from '../assets/Shivam Hotel & Restaurant.png';
 
 const Footer = () => {
   return (
@@ -6,21 +7,25 @@ const Footer = () => {
       <div className="container mx-auto flex flex-col md:flex-row justify-between">
         <div className="mb-4 md:mb-0">
           <div className="flex items-center mb-2">
-            <h2 className="text-xl font-bold">Shree Shivam Hotel & Restaurant</h2>
+            <img src={logo} alt="Logo" className="h-24 mr-2" />
+            {/* <h2 className="text-xl font-bold">Shree Shivam Hotel & Restaurant</h2> */}
           </div>
-          <p className="text-gray-400">
+          <p className="text-xl text-gray-400 mt-4">
             Savor the taste of tradition with every bite at Shree Shivam Hotel & Restaurant.
           </p>
-          <div className="flex gap-4 mt-2">
-            <a href="#" className="text-2xl"><FaFacebook /></a>
-            <a href="#" className="text-2xl"><FaTwitter /></a>
-            <a href="#" className="text-2xl"><FaInstagram /></a>
+          <div className="flex gap-4 mt-4">
+            <a href="#" className="text-4xl"><FaFacebook /></a>
+            <a href="#" className="text-4xl"><FaTwitter /></a>
+            <a href="#" className="text-4xl"><FaInstagram /></a>
           </div>
+          <hr className='mt-4 text-gray-500'/>
         </div>
         <div>
-          <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
-          <p>123 Hotel Road, City, India</p>
-          <p>+91 12345 67890</p>
+          <h3 className="text-3xl font-semibold mb-2">Contact Us</h3>
+          <p className='text-lg mb-1'>Jassakhedi, Runija Road</p>
+          <p className='text-lg mb-1'>Teh. Barnagar, Dist. Ujjain (M.P.)</p>
+          <p className='text-lg mb-1'>9407390325</p>
+          <p className='text-lg mb-1'>9826812355</p>
         </div>
       </div>
     </footer>

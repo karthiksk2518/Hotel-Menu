@@ -128,7 +128,7 @@ const Home = () => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center h-screen">
-        <div className="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+        <div className="w-16 h-16 border-8 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
         <p className="mt-4 text-lg text-gray-600">
           Wait a moment while Loading...
         </p>
@@ -144,7 +144,7 @@ const Home = () => {
   // Render menu items once data is loaded
   return (
     <div className="container mx-auto p-4">
-      <div className="flex overflow-x-auto gap-2 p-2 mb-6 sticky top-0 z-40 bg-gray-100 whitespace-nowrap border-b border-gray-300 no-scrollbar">
+      <div className="flex overflow-x-auto gap-2 p-2 mb-6 sticky top-22 z-40 bg-gray-100 whitespace-nowrap border-b border-gray-300 no-scrollbar">
         {categories.map(category => (
           <button
             key={category}
