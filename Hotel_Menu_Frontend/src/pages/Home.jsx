@@ -74,7 +74,7 @@ const Home = () => {
             onClick={() => handleCategoryClick(category)}
             className={`px-4 py-2 rounded-full ${
               selectedCategory === category
-                ? 'bg-emerald-700 text-white'
+                ? 'bg-emerald-500 text-white'
                 : 'bg-gray-200 text-gray-800'
             }`}
           >
