@@ -144,7 +144,7 @@ const Home = () => {
   // Render menu items once data is loaded
   return (
     <div className="container mx-auto p-4">
-      <div className="flex overflow-x-auto gap-2 p-2 mb-6 sticky top-22 z-40 bg-gray-100 whitespace-nowrap border-b border-gray-300 no-scrollbar">
+      <div className="flex overflow-x-auto gap-2 p-2 mb-6 sticky top-20 z-40 bg-gray-100 whitespace-nowrap border-b border-gray-300 no-scrollbar">
         {categories.map(category => (
           <button
             key={category}
