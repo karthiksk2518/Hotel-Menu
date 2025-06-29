@@ -1,4 +1,5 @@
-import { FaFacebook, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaInstagram } from 'react-icons/fa';
+import { FaSquareXTwitter } from "react-icons/fa6";
 import logo from '../assets/Shivam Hotel & Restaurant.png';
 
 const Footer = () => {
@@ -14,9 +15,9 @@ const Footer = () => {
             Savor the taste of tradition with every bite at Shree Shivam Hotel & Restaurant.
           </p>
           <div className="flex gap-4 mt-4">
-            <a href="#" className="text-4xl"><FaFacebook /></a>
-            <a href="#" className="text-4xl"><FaTwitter /></a>
-            <a href="#" className="text-4xl"><FaInstagram /></a>
+            <a href="#" className="text-4xl text-blue-500"><FaFacebook /></a>
+            <a href="#" className="text-4xl"><FaSquareXTwitter /></a>
+            <a href="#" className="text-4xl text-pink-600"><FaInstagram /></a>
           </div>
           {/* <hr className='mt-4 text-gray-500'/> */}
         </div>
