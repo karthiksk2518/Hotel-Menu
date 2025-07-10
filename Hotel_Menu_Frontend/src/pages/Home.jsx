@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     setLoading(true); // Start with loading true to show spinner
     axios
-      .get('https://shree-shivam-menu-backend.onrender.com/api/menu')
+      .get('https://ss-menu-backend.onrender.com/api/menu')
       .then(res => {
         setItems(res.data); // Set data when fetch is successful
         setLoading(false); // Stop loading only after data is received
